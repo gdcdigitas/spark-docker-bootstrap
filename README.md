@@ -36,7 +36,7 @@ docker run --rm -it --network `basename "$PWD"`_spark-network -v  `pwd`/stuff:/s
 ## Test : Python SparkPi
 
 ```[bash]
-/spark/bin/spark-submit --master spark://spark-master:7077 examples/src/main/python/pi.py 1000
+/spark/bin/spark-submit --master spark://spark-master:7077 /spark/examples/src/main/python/pi.py 1000
 ```
 ## Submit your stuff (example.HelloSpark)
 
