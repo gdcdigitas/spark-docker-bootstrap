@@ -24,7 +24,7 @@ dc up --scale spark-worker=3
 ## Access to the cluster
 
 ```[bash]
-docker run --rm -it --network spark_spark-network -v  `pwd`/jars:/examples $MYNAME/spark:latest /bin/sh
+docker run --rm -it --network spark_spark-network -v  `pwd`/stuff:/stuff $MYNAME/spark:latest /bin/sh
 ```
 
 ## Test : Java SparkPi
@@ -41,7 +41,7 @@ docker run --rm -it --network spark_spark-network -v  `pwd`/jars:/examples $MYNA
 ## Submit your stuff (example.HelloSpark)
 
 ```[bash]
-/spark/bin/spark-submit --master spark://spark-master:7077 --class example.HelloSpark /examples/hello-spark_2.11-1.0.jar /output.json
+/spark/bin/spark-submit --master spark://spark-master:7077 --class example.HelloSpark /stuff/hello-spark_2.11-1.0.jar /output.json
 ```
 # Credits
 
