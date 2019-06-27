@@ -24,7 +24,7 @@ dc up --scale spark-worker=3
 ## Access to the cluster
 
 ```[bash]
-docker run --rm -it --network spark_spark-network -v  `pwd`/stuff:/stuff $MYNAME/spark:latest /bin/sh
+docker run --rm -it --network `basename "$PWD"`_spark-network -v  `pwd`/stuff:/stuff $MYNAME/spark:latest /bin/sh
 ```
 
 ## Test : Java SparkPi
